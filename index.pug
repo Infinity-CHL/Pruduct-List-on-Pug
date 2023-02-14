@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="../css/style.css")
+    body
+        - var items = [{title: 'Iphone 13pro Max 256gb', price: '129 000 p'},{title: 'MacBook Air 2015', price: '50 000 p'},{title: 'Red bull', price: '164 p'},{title: 'Red Mi note 5', price: '29 000p'},{title: 'Cannon', price: '44 000 p'}]
+        .container 
+            ul.grid 
+                each element in items 
+                    li.grid__item 
+                        article.card 
+                            a.card__img(href='#')
+                                img(src="../img/noimg.jpeg" alt="Нет изображения товара")
+                            h3.card__title 
+                                a(href='#')= element.title
+                            span.card__price= element.price
+
